@@ -8,7 +8,7 @@ public class BakedGood
     // instance variables
     private String name;
     private String recipe;
-    private float price;
+    private float itemPrice;
     private int quantity;
 
     /**
@@ -19,7 +19,7 @@ public class BakedGood
         // initialise instance variables
         this.name = name;
         this.recipe = recipe;
-        this.price = price;
+        this.itemPrice = price;
         this.quantity = quantity;
     }
 
@@ -34,11 +34,11 @@ public class BakedGood
             throw new IllegalArgumentException("you cannot buy more than our current inventory");
         }
         this.quantity -= count;
-        return this.price * count;
+        return this.itemPrice * count;
     }
 
     public String toString() {
-        return "baked good: " + this.name + " (" + this.quantity + " @ $" + this.price + ")";
+        return "baked good: " + this.name + " (" + this.quantity + " @ $" + this.itemPrice + ")";
     }
     public static void main(String[] args) {
         BakedGood croissant = new BakedGood("croissant", "butter, flour, laminate, yum", 20, 0);
