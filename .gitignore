@@ -3,3 +3,5 @@
 *.ctxt
 # ignore the package.bluej file
 package.bluej
+# helpful for macs: ignore the ds store file
+.DS_Store
