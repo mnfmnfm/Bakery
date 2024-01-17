@@ -8,13 +8,13 @@ public class BakedGood
     // instance variables
     private String name;
     private String recipe;
-    private double itemPrice;
+    private float itemPrice;
     private int quantity;
 
     /**
      * Constructor for objects of class BakedGood
      */
-    public BakedGood(String name, String recipe, double price, int quantity)
+    public BakedGood(String name, String recipe, float price, int quantity)
     {
         // initialise instance variables
         this.name = name;
@@ -41,7 +41,7 @@ public class BakedGood
         return "baked good: " + this.name + " (" + this.quantity + " @ $" + this.itemPrice + ")";
     }
     public static void main(String[] args) {
-        BakedGood croissant = new BakedGood("croissant", "butter, flour, laminate, yum", 20.0, 0);
+        BakedGood croissant = new BakedGood("croissant", "butter, flour, laminate, yum", 20, 0);
         // bake a dozen croissants
         croissant.increaseQuantity(12);
         System.out.println(croissant);
